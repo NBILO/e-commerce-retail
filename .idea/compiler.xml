@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
         <module name="order-service" />
+        <module name="payment-service" />
         <module name="customer-service" />
         <module name="gateway-service" />
         <module name="notification-service" />
@@ -25,6 +26,7 @@
       <module name="gateway-service" options="-parameters" />
       <module name="notification-service" options="-parameters" />
       <module name="order-service" options="-parameters" />
+      <module name="payment-service" options="-parameters" />
     </option>
   </component>
 </project>
