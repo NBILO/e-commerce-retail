@@ -1,4 +1,4 @@
-package com.alibou.ecommerce.category;
+package com.commerce.productservice.category;
 
 import com.alibou.ecommerce.product.Product;
 import jakarta.persistence.CascadeType;
