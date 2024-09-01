@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.commerce</groupId>
-	<artifactId>eurekadiscovery</artifactId>
+	<artifactId>discovery-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>eureka-discovery</name>
 	<description>eureka-discovery</description>
