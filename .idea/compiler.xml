@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
         <module name="eurekadiscovery" />
+        <module name="customer-service" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="config-server" options="-parameters" />
+      <module name="customer-service" options="-parameters" />
       <module name="eurekadiscovery" options="-parameters" />
     </option>
   </component>
