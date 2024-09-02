@@ -26,11 +26,11 @@ B2C Checkout allows:
 <li>Order confirmation</li>
 </ul>
 
-Technology Stack
+<h2>Technology Stack</h2>
 
 E-commerce-retail is a modern web application written in Java and organized as an monorepo project.
 
-Backend
+<h3>Backend</h3>
 The backend is based on Java using SpringBoot,(MongoDB,PostgresSQL) as a database together with flyway and Redis for caching.
 Kafka for event streaming
 ElasticSearch for Implementing full text search catalog/products  and indexes for logging with logstash
@@ -38,24 +38,25 @@ Logstash to manage events and logs
 Kibana/Grafana/splunk/Dynatrace to visualize data and implement alerting
 Prometheus for monitoring system and collecting metrics
 
-Frontend
+<h3>Frontend</h3>
 The frontend is built with Angular and uses Angular Material with utility classes from Bootstrap.
 
-Self-hosting
+<h3>Self-hosting</h3>
 We provide official container images hosted on Docker Hub.
 
-
-Run with Docker Compose
-Prerequisites
+<h2>Run with Docker Compose</h2>
+<h3>Prerequisites</h3>
 Basic knowledge of Docker
-Installation of Docker
-Create a local copy of this Git repository (clone)
-a. Run environment
+<ul>
+<li>Installation of Docker</li>
+<li>Create a local copy of this Git repository (clone)</li>
+<ul>
+<h3>Start project</h3>
 Run the following command to start the Docker images from Docker Hub:
+docker compose docker-compose.yml up -d 
 
-docker compose docker-compose.yml up -d
 
-Bugs and feature requests
+<h2>Bugs and feature requests</h2>
 
 Have a bug or a feature request? Please first read the issue guidelines and search for existing and closed issues. 
 If your problem or idea is not addressed yet, please open a new issue.
