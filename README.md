@@ -1,9 +1,9 @@
 
 
-E-commerce-retail App
-Example app with Spring Boot and Java 17  and Angular Standalone Components and Es-Build Enabled
+<h1>E-commerce-retail App</h1>
+<h3>Example app with Spring Boot and Java 17  and Angular Standalone Components and Es-Build Enabled</h3>
 
-👏👏🎉🎉🎉🎉👏👏
+      <H1>👏👏🎉🎉🎉🎉👏👏</H1>
 
 Real World App made with much ❤️. Contains CRUD, advanced patterns and much more!
 
