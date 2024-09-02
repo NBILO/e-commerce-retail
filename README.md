@@ -26,6 +26,8 @@ B2C Checkout allows:
 <li>Order confirmation</li>
 </ul>
 
+<h2>Project Architecture</h2>
+<img src="/diagram/ecommerce-retail-services.png">
 <h2>Technology Stack</h2>
 
 E-commerce-retail is a modern web application written in Java and organized as an monorepo project.
