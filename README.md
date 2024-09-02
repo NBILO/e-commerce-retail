@@ -3,7 +3,7 @@
 <h1>E-commerce-retail App</h1>
 <h3>Example app with Spring Boot and Java 17  and Angular Standalone Components and Es-Build Enabled</h3>
 
-      <H1>👏👏🎉🎉🎉🎉👏👏</H1>
+      👏👏🎉🎉🎉🎉👏👏
 
 Real World App made with much ❤️. Contains CRUD, advanced patterns and much more!
 
@@ -12,18 +12,19 @@ customers.
 With B2C Checkout, business customers can easily access company-specific information, 
 such as payment terms, preferred payment method, and wholesale discounts, every time they place an order.
 
-What's included
+<h2>What's included</h2>
 
 B2C Checkout allows:
-The logistics of its products (inventory management, deliveries, delivery tracking)
-Marketing (up-selling, cross-selling, abandoned cart recovery)
-Online payment
-Order management
-Returns management
-Abandoned cart recovery
-Optimize the process and customer experience
-Order confirmation
-
+<ul>
+<li>The logistics of its products (inventory management, deliveries, delivery tracking)</li>
+<li>Marketing (up-selling, cross-selling, abandoned cart recovery)</li>
+<li>Online payment</li>
+<li>Order management</li>
+<li>Returns management</li>
+<li>Abandoned cart recovery</li>
+<li>Optimize the process and customer experience</li>
+<li>Order confirmation</li>
+</ul>
 
 Technology Stack
 
