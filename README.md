@@ -33,13 +33,15 @@ B2C Checkout allows:
 E-commerce-retail is a modern web application written in Java and organized as an monorepo project.
 
 <h3>Backend</h3>
-The backend is based on Java using SpringBoot,(MongoDB,PostgresSQL) as a database together with flyway and Redis for caching.
-Kafka for event streaming
-ElasticSearch for Implementing full text search catalog/products  and indexes for logging with logstash
-Logstash to manage events and logs
-Kibana/Grafana/splunk/Dynatrace to visualize data and implement alerting
-Prometheus for monitoring system and collecting metrics
-
+The backend is based on Java using SpringBoot:
+<ul>
+<li>MongoDB,PostgresSQL) as a database together with flyway and Redis for caching.</li>
+<li>Kafka for event streaming</li>
+<li>ElasticSearch for Implementing full text search catalog/products  and indexes for logging with logstash</li>
+<li>Logstash to manage events and logs</li>
+<li>Kibana/Grafana/splunk/Dynatrace to visualize data and implement alerting</li>
+<li>Prometheus for monitoring system and collecting metrics</li>
+</ul>
 <h3>Frontend</h3>
 The frontend is built with Angular and uses Angular Material with utility classes from Bootstrap.
 
