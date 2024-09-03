@@ -94,6 +94,46 @@ services:
       - 1080:1080
       - 1025:1025
 
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.13.0
+    container_name: elasticsearch
+    environment:
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+      - 9300:9300
+    networks:
+      - ecommerce-microservices-net
+  kibana:
+    container_name: kibana
+    image: docker.elastic.co/kibana/kibana:8.13.0
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    ports:
+      - 5601:5601
+    depends_on:
+      - elasticsearch
+    networks:
+      - ecommerce-microservices-net
+  logstash:
+    container_name: logstash
+    hostname: logstash
+    image: docker.elastic.co/logstash/logstash:8.13.0
+    volumes:
+      #- ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro,Z
+      - ./logstash.conf:/usr/share/logstash/config/logstash.conf
+    ports:
+      - "9600:9600"
+      - "7777:7777"
+    networks:
+      - ecommerce-microservices-net
+    depends_on:
+      - elasticsearch
+    restart: unless-stopped
+
 networks:
   ecommerce-microservices-net:
     driver: bridge
@@ -102,3 +142,4 @@ volumes:
   postgres:
   pgadmin:
   mongo:
+  elasticsearch:
