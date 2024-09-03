@@ -18,4 +18,6 @@ spring:
     baseline-version: 0
     user: ${spring.datasource.username}
     password: ${spring.datasource.password}
+logging:
+  file: C:/Users/foreverNMG/Desktop/logs/elk-stack.log
 
