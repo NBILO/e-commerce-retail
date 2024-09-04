@@ -1,10 +1,10 @@
 package com.commerce.notificationservice.kafka;
 
-import com.alibou.ecommerce.email.EmailService;
-import com.alibou.ecommerce.kafka.order.OrderConfirmation;
-import com.alibou.ecommerce.kafka.payment.PaymentConfirmation;
-import com.alibou.ecommerce.notification.Notification;
-import com.alibou.ecommerce.notification.NotificationRepository;
+import com.commerce.email.EmailService;
+import com.commerce.kafka.order.OrderConfirmation;
+import com.commerce.kafka.payment.PaymentConfirmation;
+import com.commerce.notification.Notification;
+import com.commerce.notification.NotificationRepository;
 import jakarta.mail.MessagingException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -13,8 +13,8 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 
-import static com.alibou.ecommerce.notification.NotificationType.ORDER_CONFIRMATION;
-import static com.alibou.ecommerce.notification.NotificationType.PAYMENT_CONFIRMATION;
+import static com.commerce.notification.NotificationType.ORDER_CONFIRMATION;
+import static com.commerce.notification.NotificationType.PAYMENT_CONFIRMATION;
 import static java.lang.String.format;
 
 @Service

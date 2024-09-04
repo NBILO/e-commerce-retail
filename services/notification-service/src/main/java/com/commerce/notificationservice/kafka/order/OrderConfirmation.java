@@ -1,6 +1,6 @@
 package com.commerce.notificationservice.kafka.order;
 
-import com.alibou.ecommerce.kafka.payment.PaymentMethod;
+import com.commerce.kafka.payment.PaymentMethod;
 
 import java.math.BigDecimal;
 import java.util.List;

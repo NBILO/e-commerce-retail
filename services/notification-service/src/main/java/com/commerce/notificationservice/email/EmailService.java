@@ -1,6 +1,6 @@
 package com.commerce.notificationservice.email;
 
-import com.alibou.ecommerce.kafka.order.Product;
+import com.commerce.kafka.order.Product;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;
@@ -17,8 +17,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static com.alibou.ecommerce.email.EmailTemplates.ORDER_CONFIRMATION;
-import static com.alibou.ecommerce.email.EmailTemplates.PAYMENT_CONFIRMATION;
+import static com.commerce.email.EmailTemplates.ORDER_CONFIRMATION;
+import static com.commerce.email.EmailTemplates.PAYMENT_CONFIRMATION;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 @Service
@@ -39,7 +39,7 @@ public class EmailService {
 
         MimeMessage mimeMessage = mailSender.createMimeMessage();
         MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage, MimeMessageHelper.MULTIPART_MODE_MIXED_RELATED, UTF_8.name());
-        messageHelper.setFrom("contact@aliboucoding.com");
+        messageHelper.setFrom("javadeamons@gmail.com");
 
         final String templateName = PAYMENT_CONFIRMATION.getTemplate();
 
@@ -76,7 +76,7 @@ public class EmailService {
 
         MimeMessage mimeMessage = mailSender.createMimeMessage();
         MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage, MimeMessageHelper.MULTIPART_MODE_MIXED_RELATED, UTF_8.name());
-        messageHelper.setFrom("contact@aliboucoding.com");
+        messageHelper.setFrom("javadeamons@gmail.com");
 
         final String templateName = ORDER_CONFIRMATION.getTemplate();
 

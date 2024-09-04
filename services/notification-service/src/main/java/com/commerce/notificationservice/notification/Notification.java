@@ -1,7 +1,7 @@
 package com.commerce.notificationservice.notification;
 
-import com.alibou.ecommerce.kafka.order.OrderConfirmation;
-import com.alibou.ecommerce.kafka.payment.PaymentConfirmation;
+import com.commerce.kafka.order.OrderConfirmation;
+import com.commerce.kafka.payment.PaymentConfirmation;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
