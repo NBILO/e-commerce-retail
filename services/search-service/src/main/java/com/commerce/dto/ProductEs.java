@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 @Setter
 
 public class ProductEs {
-    private Integer id;
+    private String id;
     private String name;
     private String description;
     private double availableQuantity;
