@@ -1,4 +1,5 @@
 package com.commerce.config;
+
 import co.elastic.clients.elasticsearch.ElasticsearchClient;
 import co.elastic.clients.elasticsearch.cluster.HealthResponse;
 import co.elastic.clients.json.jackson.JacksonJsonpMapper;
@@ -9,23 +10,31 @@ import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.elasticsearch.client.RestClient;
-
-
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
 
 @Configuration
 public class ElasticApiClient {
+    @Value("${elasticsearch.host}")
+    private String host;
+    @Value("${elasticsearch.port}")
+    private int port;
+    @Value("${elasticsearch.schema}")
+    private String schema;
+    @Value("${elasticsearch.user}")
+    private String user;
+    @Value("${elasticsearch.password}")
+    private String password;
 
-    public  ElasticsearchClient getElasticsearchclient() throws IOException {
+    public ElasticsearchClient getElasticsearchclient() throws IOException {
         BasicCredentialsProvider credsProv = new BasicCredentialsProvider();
-        credsProv.setCredentials(AuthScope.ANY, new UsernamePasswordCredentials("elastic", "NlfGhKDDy=36FpvM*o0l"));
+        credsProv.setCredentials(AuthScope.ANY, new UsernamePasswordCredentials(user, password));
 
         RestClient restClient = RestClient
-                .builder(new HttpHost("localhost", 9200, "http"))
+                .builder(new HttpHost(host, port, schema))
                 .setHttpClientConfigCallback(hc -> hc
                         .setDefaultCredentialsProvider(credsProv)
                 )

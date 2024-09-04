@@ -1,3 +1,11 @@
+elasticsearch:
+  host: localhost
+  port: 9200
+  schema: http
+  user: elastic
+  pass : NlfGhKDDy=36FpvM*o0l
+
+
 server:
   port: 8030
 management:
