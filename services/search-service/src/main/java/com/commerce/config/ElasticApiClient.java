@@ -11,6 +11,7 @@ import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.elasticsearch.client.RestClient;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.io.IOException;
@@ -28,7 +29,8 @@ public class ElasticApiClient {
     private String user;
     @Value("${elasticsearch.password}")
     private String password;
-
+    
+    @Bean
     public ElasticsearchClient getElasticsearchclient() throws IOException {
         BasicCredentialsProvider credsProv = new BasicCredentialsProvider();
         credsProv.setCredentials(AuthScope.ANY, new UsernamePasswordCredentials(user, password));
