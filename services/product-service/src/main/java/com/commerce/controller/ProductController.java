@@ -1,5 +1,10 @@
-package com.commerce.product;
+package com.commerce.controller;
 
+import com.commerce.dto.ProductPurchaseRequest;
+import com.commerce.dto.ProductPurchaseResponse;
+import com.commerce.dto.ProductRequest;
+import com.commerce.dto.ProductResponse;
+import com.commerce.service.ProductService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

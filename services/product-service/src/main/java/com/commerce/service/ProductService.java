@@ -1,6 +1,12 @@
-package com.commerce.product;
+package com.commerce.service;
 
+import com.commerce.dto.ProductPurchaseRequest;
+import com.commerce.dto.ProductPurchaseResponse;
+import com.commerce.dto.ProductRequest;
 import com.commerce.exception.ProductPurchaseException;
+import com.commerce.mapper.ProductMapper;
+import com.commerce.dto.ProductResponse;
+import com.commerce.repository.ProductRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

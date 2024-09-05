@@ -1,5 +1,6 @@
-package com.commerce.product;
+package com.commerce.repository;
 
+import com.commerce.domain.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

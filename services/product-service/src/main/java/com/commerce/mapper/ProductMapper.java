@@ -1,6 +1,10 @@
-package com.commerce.product;
+package com.commerce.mapper;
 
-import com.commerce.category.Category;
+import com.commerce.domain.Category;
+import com.commerce.domain.Product;
+import com.commerce.dto.ProductPurchaseResponse;
+import com.commerce.dto.ProductRequest;
+import com.commerce.dto.ProductResponse;
 import org.springframework.stereotype.Service;
 
 @Service

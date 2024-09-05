@@ -1,6 +1,5 @@
-package com.commerce.category;
+package com.commerce.domain;
 
-import com.commerce.product.Product;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
