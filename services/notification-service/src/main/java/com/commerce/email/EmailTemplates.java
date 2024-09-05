@@ -1,4 +1,4 @@
-package com.commerce.notificationservice.email;
+package com.commerce.email;
 
 import lombok.Getter;
 

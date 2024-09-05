@@ -1,4 +1,4 @@
-package com.commerce.notificationservice.email;
+package com.commerce.email;
 
 import com.commerce.kafka.order.Product;
 import jakarta.mail.MessagingException;
