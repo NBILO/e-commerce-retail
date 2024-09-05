@@ -1,4 +1,4 @@
-package com.commerce.notificationservice.kafka.payment;
+package com.commerce.kafka.payment;
 
 public enum PaymentMethod {
 

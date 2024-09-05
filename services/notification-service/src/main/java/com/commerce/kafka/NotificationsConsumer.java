@@ -1,4 +1,4 @@
-package com.commerce.notificationservice.kafka;
+package com.commerce.kafka;
 
 import com.commerce.email.EmailService;
 import com.commerce.kafka.order.OrderConfirmation;

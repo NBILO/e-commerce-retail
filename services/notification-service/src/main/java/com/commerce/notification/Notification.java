@@ -1,10 +1,9 @@
-package com.commerce.notificationservice.notification;
+package com.commerce.notification;
 
 import com.commerce.kafka.order.OrderConfirmation;
 import com.commerce.kafka.payment.PaymentConfirmation;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

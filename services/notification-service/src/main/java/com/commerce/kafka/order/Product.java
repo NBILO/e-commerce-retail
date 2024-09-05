@@ -1,4 +1,4 @@
-package com.commerce.notificationservice.kafka.order;
+package com.commerce.kafka.order;
 
 import java.math.BigDecimal;
 
