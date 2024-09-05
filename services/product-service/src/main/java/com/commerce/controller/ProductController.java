@@ -4,7 +4,7 @@ import com.commerce.dto.ProductPurchaseRequest;
 import com.commerce.dto.ProductPurchaseResponse;
 import com.commerce.dto.ProductRequest;
 import com.commerce.dto.ProductResponse;
-import com.commerce.service.ProductService;
+import com.commerce.ProductService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

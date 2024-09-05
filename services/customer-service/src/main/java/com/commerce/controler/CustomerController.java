@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.commerce.dto.CustomerRequest;
 import com.commerce.dto.CustomerResponse;
-import com.commerce.service.CustomerService;
+import com.commerce.CustomerService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

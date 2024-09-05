@@ -15,6 +15,8 @@
         <option value="$PROJECT_DIR$/services/product-service/pom.xml" />
         <option value="$PROJECT_DIR$/services/search-service/pom.xml" />
         <option value="$PROJECT_DIR$/services/commons/pom.xml" />
+        <option value="$PROJECT_DIR$/services/search-ingest-service/pom.xml" />
+        <option value="$PROJECT_DIR$/services/commons/elasticsearch-commons/pom.xml" />
       </list>
     </option>
   </component>

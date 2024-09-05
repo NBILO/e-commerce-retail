@@ -3,24 +3,22 @@ package com.commerce.service;
 import co.elastic.clients.elasticsearch.core.BulkRequest;
 import co.elastic.clients.elasticsearch.core.BulkResponse;
 import co.elastic.clients.elasticsearch.indices.CreateIndexRequest;
-import com.commerce.dto.ProductEs;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class IndexService {
+public  abstract class IndexServiceGeneric<T> {
 
     final private co.elastic.clients.elasticsearch.ElasticsearchClient elasticsearchClient;
 
-    public IndexService(co.elastic.clients.elasticsearch.ElasticsearchClient elasticsearchClient) {
+    public IndexServiceGeneric(co.elastic.clients.elasticsearch.ElasticsearchClient elasticsearchClient) {
         this.elasticsearchClient = elasticsearchClient;
     }
 
-    private boolean createIndex(String indexName, String settingPath) throws IOException {
+    public boolean createIndex(String indexName, String settingPath) throws IOException {
         CreateIndexRequest req;
         try (InputStream settings = this.getClass()
                 .getResourceAsStream(settingPath)) {
@@ -35,25 +33,18 @@ public class IndexService {
         return created;
     }
 
-    private boolean ingestBulkRequest(String indexName) throws IOException {
-        List<ProductEs> products = fetchProducts();
-        BulkRequest.Builder br = new BulkRequest.Builder();
+    public boolean ingestBulkRequest(String indexName, List<T> documents) throws IOException {
 
-        for (ProductEs product : products) {
+        BulkRequest.Builder br = new BulkRequest.Builder();
+        for (T document : documents) {
             br.operations(op -> op
                     .index(idx -> idx
                             .index(indexName)
-                            .id(product.getId())
-                            .document(product)
+                            .document(document)
                     )
             );
         }
         BulkResponse result = elasticsearchClient.bulk(br.build());
         return !result.errors();
-    }
-
-
-    private List<ProductEs> fetchProducts() {
-        return new ArrayList<>();
     }
 }

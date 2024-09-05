@@ -1,4 +1,4 @@
-package com.commerce.service;
+package com.commerce;
 
 import com.commerce.dto.ProductPurchaseRequest;
 import com.commerce.dto.ProductPurchaseResponse;

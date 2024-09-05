@@ -1,4 +1,4 @@
-package com.commerce.service;
+package com.commerce;
 
 import com.commerce.exception.CustomerNotFoundException;
 import com.commerce.dto.CustomerResponse;

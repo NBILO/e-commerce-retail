@@ -12,10 +12,12 @@
         <module name="gateway-service" />
         <module name="search-service" />
         <module name="product-service" />
+        <module name="search-ingest-service" />
         <module name="order-service" />
         <module name="notification-service" />
         <module name="discovery-service" />
         <module name="commons" />
+        <module name="elasticsearch-commons" />
       </profile>
     </annotationProcessing>
   </component>
@@ -25,11 +27,13 @@
       <module name="config-server" options="-parameters" />
       <module name="customer-service" options="-parameters" />
       <module name="discovery-service" options="-parameters" />
+      <module name="elasticsearch-commons" options="-parameters" />
       <module name="gateway-service" options="-parameters" />
       <module name="notification-service" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="payment-service" options="-parameters" />
       <module name="product-service" options="-parameters" />
+      <module name="search-ingest-service" options="-parameters" />
       <module name="search-service" options="-parameters" />
     </option>
   </component>

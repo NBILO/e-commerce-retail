@@ -1,8 +1,8 @@
 package com.commerce.controler;
 
 import com.commerce.dto.ProductEs;
-import com.commerce.service.AutoCompleteService;
-import com.commerce.service.SearchService;
+import com.commerce.AutoCompleteService;
+import com.commerce.SearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
