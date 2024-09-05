@@ -16,6 +16,7 @@ such as payment terms, preferred payment method, and wholesale discounts, every 
 
 B2C Checkout allows:
 <ul>
+<li>search for products</li>
 <li>The logistics of its products (inventory management, deliveries, delivery tracking)</li>
 <li>Marketing (up-selling, cross-selling, abandoned cart recovery)</li>
 <li>Online payment</li>
@@ -41,6 +42,10 @@ The backend is based on Java using SpringBoot:
 <li>Logstash to manage events and logs</li>
 <li>Kibana/Grafana/splunk/Dynatrace to visualize data and implement alerting</li>
 <li>Prometheus for monitoring system and collecting metrics</li>
+<li>Discovery Server with Eureka</li>
+<li>keycloak to handle authentication and authorization</li>
+<li>use the RestTemplate and ClientFeign to consume an API using all the main HTTP Verbs.</li>
+<li>SpringBatch to ingest data into Elasticsearch index</li> 
 </ul>
 <h3>Frontend</h3>
 The frontend is built with Angular and uses Angular Material with utility classes from Bootstrap.
