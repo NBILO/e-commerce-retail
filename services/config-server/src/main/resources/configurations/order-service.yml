@@ -1,11 +1,22 @@
 server:
   port: 8070
+jwt:
+  auth:
+    converter:
+      resource-id: order-rest-api
+      principle-attribute: preferred_username
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/order
     username: foreverNMG
     password: foreverNMG
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/commerce
+          jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
   jpa:
     hibernate:
       ddl-auto: create

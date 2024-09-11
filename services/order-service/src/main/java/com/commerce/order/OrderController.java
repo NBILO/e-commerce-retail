@@ -5,6 +5,7 @@ import java.util.List;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,11 +28,13 @@ public class OrderController {
   }
 
   @GetMapping
+  @PreAuthorize("hasRole('client_admin')")
   public ResponseEntity<List<OrderResponse>> findAll() {
     return ResponseEntity.ok(this.service.findAllOrders());
   }
 
   @GetMapping("/{order-id}")
+  @PreAuthorize("hasRole('client_user')")
   public ResponseEntity<OrderResponse> findById(
       @PathVariable("order-id") Integer orderId
   ) {
